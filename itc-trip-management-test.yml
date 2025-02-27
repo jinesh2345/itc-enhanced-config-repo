@@ -1,0 +1,17 @@
+server:
+  port: 8886
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: 'jdbc:mysql://localhost:3306/tripmanagementtestdb'
+    username: root
+    password: Jinesh@123
+  jpa:
+    show_sql: true
+    hibernate:
+      hbm2.ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQLDialect
