@@ -1,16 +1,17 @@
 server:
   port: 8883
 spring:
-  application:
-    name: itc-plan-management
+  config:
+    activate:
+      on-profile: dev
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: 'jdbc:mysql://localhost:3306/planmanagementdevdb'
+    url: jdbc:mysql://localhost:3306/planmanagementdevdb
     username: root
     password: Jinesh@123
   jpa:
     show_sql: true
     hibernate:
-      ddl-auto: update
+      hbm2.ddl-auto: update
     properties:
       hibernate.dialect: org.hibernate.dialect.MySQLDialect
