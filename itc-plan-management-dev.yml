@@ -15,3 +15,9 @@ spring:
       hbm2.ddl-auto: update
     properties:
       hibernate.dialect: org.hibernate.dialect.MySQLDialect
+eureka:
+  client:
+     register-with-eureka: true
+     fetch-registry: false
+     service-url:
+           defaultZone: "http://localhost:9091/eureka/,http://localhost:9092/eureka/"
